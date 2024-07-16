@@ -1,11 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int opcion;
+
+        do {
+            System.out.println("¡Bienvenido al conversor de monedas!");
+            System.out.println("1. Convertir de USD a ARS");
+            System.out.println("2. Convertir de ARS a USD");
+            System.out.println("3. Convertir de USD a BRL");
+            System.out.println("4. Convertir de BRL a USD");
+            System.out.println("5. Convertir de ARS a BRL");
+            System.out.println("6. Convertir de BRL a ARS");
+            System.out.println("7. Salir");
+            System.out.print("Seleccione una opción: ");
+            opcion = scanner.nextInt();
+
+            if (opcion >= 1 && opcion <= 6) {
+                System.out.print("Ingrese el valor que desea convertir: ");
+                double valor = scanner.nextDouble();
+                // Aquí llamaremos a la función de conversión
+            } else if (opcion != 7) {
+                System.out.println("Opción no válida, por favor intente de nuevo.");
+            }
+        } while (opcion != 7);
+
+        System.out.println("¡Gracias por usar el conversor de monedas!");
+    }
+}
